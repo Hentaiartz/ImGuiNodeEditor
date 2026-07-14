@@ -1,7 +1,7 @@
 nextId 1050
 node 1000 Theme
 name S "Theme"
-pos V 80.0 30.0
+pos V 447.0 47.0
 primary C 0.490 0.440 1.000 1.000
 primaryHover C 0.560 0.510 1.000 1.000
 bgColor C 0.090 0.090 0.110 1.000
@@ -20,23 +20,23 @@ tabHovered C 0.240 0.270 0.380 1.000
 tab C 0.100 0.110 0.140 1.000
 dockingPreview C 0.350 0.550 0.850 0.500
 windowBg C 0.100 0.110 0.130 1.000
-fontSize F 15.0
-rounding F 10.0
-themeSpacing F 8.0
-borderWidth F 0.0
-scrollbarSize F 12.0
 disabledText C 0.500 0.500 0.550 0.500
 disabledBg C 0.250 0.250 0.250 0.400
 frameBgHover C 0.180 0.200 0.250 1.000
 frameBgActive C 0.220 0.250 0.300 1.000
 primaryActive C 0.400 0.360 0.850 1.000
 titleText C 0.950 0.950 0.960 1.000
+fontSize F 15.0
+rounding F 10.0
+themeSpacing F 8.0
+borderWidth F 0.0
+scrollbarSize F 12.0
 end
 node 1001 Window
 name S "Login"
 pos V 860.0 170.0
 title S "Login"
-windowSize V 400.0 620.0
+windowSize V 400.0 600.0
 flags I 11
 framePadding V 0.0 0.0
 end
@@ -113,7 +113,7 @@ bgColor C 0.000 0.000 0.000 0.000
 end
 node 1008 InputText
 name S "EmailInput"
-pos V 10.0 790.0
+pos V -175.0 259.0
 label S "##email"
 text S ""
 maxLength I 256
@@ -121,8 +121,8 @@ password B 0
 align I 0
 offset V 0.0 0.0
 width F 344.0
-height F 0.0
-framePadding V 14.0 12.0
+height F 35.0
+framePadding V 14.0 8.0
 borderColor C 0.300 0.300 0.350 1.000
 borderSize F 1.0
 rounding F 8.0
@@ -154,7 +154,7 @@ bgColor C 0.000 0.000 0.000 0.000
 end
 node 1010 InputText
 name S "PassInput"
-pos V 10.0 940.0
+pos V -196.0 380.0
 label S "##pass"
 text S ""
 maxLength I 256
@@ -162,8 +162,8 @@ password B 1
 align I 0
 offset V 0.0 0.0
 width F 344.0
-height F 0.0
-framePadding V 14.0 12.0
+height F 35.0
+framePadding V 14.0 8.0
 borderColor C 0.300 0.300 0.350 1.000
 borderSize F 1.0
 rounding F 8.0
@@ -178,7 +178,7 @@ fontScale F 1.00
 end
 node 1012 Checkbox
 name S "Remember"
-pos V 10.0 1020.0
+pos V 246.0 973.0
 label S "Remember me"
 checked B 1
 align I 0
@@ -199,7 +199,7 @@ fontScale F 0.85
 end
 node 1013 Text
 name S "ForgotText"
-pos V 10.0 1020.0
+pos V 255.0 1099.0
 text S "Forgot your password?"
 color C 0.700 0.650 1.000 1.000
 wrapWidth F 0.0
@@ -216,7 +216,7 @@ bgColor C 0.000 0.000 0.000 0.000
 end
 node 1011 Row
 name S "RememberRow"
-pos V 10.0 1000.0
+pos V 276.0 821.0
 hasBg I 0
 padding F 0.0
 widthMode I 0
@@ -224,7 +224,7 @@ heightMode I 0
 fixedSize V 200.0 100.0
 justify I 3
 align I 0
-spacing F 0.0
+spacing F 12.0
 end
 node 1014 Button
 name S "SignInBtn"
@@ -266,7 +266,7 @@ bgColor C 0.000 0.000 0.000 0.000
 end
 node 1018 Row
 name S "SocialRow"
-pos V 10.0 1200.0
+pos V 515.0 1219.0
 hasBg I 0
 padding F 0.0
 widthMode I 0
@@ -299,7 +299,7 @@ framePadding V 0.0 0.0
 end
 node 1020 Button
 name S "GitHubBtn"
-pos V 210.0 1270.0
+pos V 204.0 1368.0
 label S "   GitHub"
 buttonSize V 140.0 42.0
 disabled B 0
@@ -323,7 +323,6 @@ name S "Preview"
 pos V 1650.0 250.0
 end
 link 1022 10000001 10010001
-link 1023 10000001 10030001
 link 1024 10030100 10010002
 link 1025 10040002 10030002
 link 1026 10050002 10030002

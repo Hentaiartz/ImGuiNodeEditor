@@ -66,7 +66,7 @@ void WindowNode::RenderPreview(const RenderContext& ctx) {
     for (auto* c : ch) if (dynamic_cast<MenuBarNode*>(c)) { wf |= ImGuiWindowFlags_MenuBar; break; }
     if (m_FramePadding.x > 0 || m_FramePadding.y > 0) ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, m_FramePadding);
     if (wt) ImGui::PushStyleColor(ImGuiCol_Text, wt->m_TitleText); // title bar text
-    ImGui::SetNextWindowSize(m_WindowSize, ImGuiCond_Appearing);
+    ImGui::SetNextWindowSize(m_WindowSize, ImGuiCond_Always);
     bool beginResult = ImGui::Begin(wndId, nullptr, wf);
     if (wt) ImGui::PopStyleColor(); // pop TitleText
     if (beginResult) {
