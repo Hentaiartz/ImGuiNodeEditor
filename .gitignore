@@ -1,0 +1,34 @@
+# Build output
+build/
+cmake-build-*/
+CMakeFiles/
+ext/glfw-build/
+
+# IDE files
+.vs/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Windows
+*.exe
+*.obj
+*.lib
+*.dll
+*.exp
+*.pdb
+*.ilk
+*.aps
+*.ncb
+*.suo
+*.user
+*.sdf
+*.ipch
+
+# Project runtime
+imgui.ini
+config.cfg
+
+# macOS
+.DS_Store
