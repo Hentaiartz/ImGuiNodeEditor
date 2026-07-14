@@ -36,7 +36,7 @@ node 1001 Window
 name S "Login"
 pos V 860.0 170.0
 title S "Login"
-windowSize V 400.0 680.0
+windowSize V 400.0 620.0
 flags I 11
 framePadding V 0.0 0.0
 end
@@ -44,7 +44,7 @@ node 1003 Column
 name S "Column"
 pos V 200.0 120.0
 hasBg I 0
-padding F 24.0
+padding F 28.0
 widthMode I 0
 heightMode I 0
 fixedSize V 200.0 100.0
@@ -74,12 +74,12 @@ node 1005 Text
 name S "Subtitle"
 pos V 10.0 560.0
 text S "Sign in to continue."
-color C 0.550 0.560 0.600 1.000
+color C 0.600 0.610 0.650 1.000
 wrapWidth F 0.0
 align I 1
 useCustomColor B 1
 offset V 0.0 0.0
-fontScale F 0.80
+fontScale F 0.82
 customStyle B 0
 framePadding V 0.0 0.0
 frameRounding F 0.0
@@ -88,9 +88,9 @@ borderColor C 0.300 0.300 0.350 1.000
 bgColor C 0.000 0.000 0.000 0.000
 end
 node 1006 Spacer
-name S "Spacer"
+name S "Spacer1"
 pos V 10.0 640.0
-widgetSize V 0.0 20.0
+widgetSize V 0.0 24.0
 align I 0
 offset V 0.0 0.0
 end
@@ -98,7 +98,7 @@ node 1007 Text
 name S "EmailLabel"
 pos V 10.0 720.0
 text S "Email address"
-color C 0.550 0.560 0.600 1.000
+color C 0.600 0.610 0.650 1.000
 wrapWidth F 0.0
 align I 0
 useCustomColor B 1
@@ -120,18 +120,18 @@ maxLength I 256
 password B 0
 align I 0
 offset V 0.0 0.0
-width F 0.0
+width F 344.0
 height F 0.0
 framePadding V 14.0 12.0
-borderColor C 0.369 0.302 0.624 0.976
+borderColor C 0.300 0.300 0.350 1.000
 borderSize F 1.0
-rounding F 10.0
+rounding F 8.0
 customStyle B 1
 bgColor C 0.090 0.090 0.110 1.000
 bgHoverColor C 0.120 0.120 0.150 1.000
 bgActiveColor C 0.090 0.090 0.110 1.000
-borderHoverColor C 0.474 0.389 0.796 0.976
-borderActiveColor C 0.522 0.431 0.873 0.976
+borderHoverColor C 0.600 0.550 1.000 1.000
+borderActiveColor C 0.490 0.440 1.000 1.000
 textColor C 1.000 1.000 1.000 1.000
 fontScale F 1.00
 end
@@ -139,7 +139,7 @@ node 1009 Text
 name S "PassLabel"
 pos V 10.0 870.0
 text S "Password"
-color C 0.550 0.560 0.600 1.000
+color C 0.600 0.610 0.650 1.000
 wrapWidth F 0.0
 align I 0
 useCustomColor B 1
@@ -161,31 +161,24 @@ maxLength I 256
 password B 1
 align I 0
 offset V 0.0 0.0
-width F 0.0
+width F 344.0
 height F 0.0
 framePadding V 14.0 12.0
-borderColor C 0.369 0.302 0.624 0.976
+borderColor C 0.300 0.300 0.350 1.000
 borderSize F 1.0
-rounding F 10.0
+rounding F 8.0
 customStyle B 1
 bgColor C 0.090 0.090 0.110 1.000
 bgHoverColor C 0.120 0.120 0.150 1.000
 bgActiveColor C 0.090 0.090 0.110 1.000
-borderHoverColor C 0.474 0.389 0.796 0.976
-borderActiveColor C 0.522 0.431 0.873 0.976
+borderHoverColor C 0.600 0.550 1.000 1.000
+borderActiveColor C 0.490 0.440 1.000 1.000
 textColor C 1.000 1.000 1.000 1.000
 fontScale F 1.00
 end
-node 1011 Spacer
-name S "Spacer2"
-pos V 10.0 1010.0
-widgetSize V 0.0 8.0
-align I 0
-offset V 0.0 0.0
-end
 node 1012 Checkbox
 name S "Remember"
-pos V 10.0 1050.0
+pos V 10.0 1020.0
 label S "Remember me"
 checked B 1
 align I 0
@@ -204,11 +197,40 @@ bgActiveColor C 0.400 0.360 0.900 1.000
 textColor C 0.750 0.750 0.820 1.000
 fontScale F 0.85
 end
+node 1013 Text
+name S "ForgotText"
+pos V 10.0 1020.0
+text S "Forgot your password?"
+color C 0.700 0.650 1.000 1.000
+wrapWidth F 0.0
+align I 2
+useCustomColor B 1
+offset V 0.0 0.0
+fontScale F 0.80
+customStyle B 0
+framePadding V 0.0 0.0
+frameRounding F 0.0
+borderSize F 0.0
+borderColor C 0.300 0.300 0.350 1.000
+bgColor C 0.000 0.000 0.000 0.000
+end
+node 1011 Row
+name S "RememberRow"
+pos V 10.0 1000.0
+hasBg I 0
+padding F 0.0
+widthMode I 0
+heightMode I 0
+fixedSize V 200.0 100.0
+justify I 3
+align I 0
+spacing F 0.0
+end
 node 1014 Button
 name S "SignInBtn"
-pos V 10.0 1130.0
+pos V 10.0 1100.0
 label S "Sign In"
-buttonSize V 0.0 48.0
+buttonSize V 344.0 48.0
 disabled B 0
 align I 0
 offset V 0.0 0.0
@@ -220,46 +242,15 @@ borderColor C 0.500 0.500 0.600 1.000
 borderHoverColor C 0.700 0.700 0.800 1.000
 borderActiveColor C 0.400 0.400 0.500 1.000
 borderSize F 0.0
-frameRounding F 12.0
+frameRounding F 8.0
 textColor C 1.000 1.000 1.000 1.000
 fontScale F 1.05
 framePadding V 16.0 12.0
 end
 node 1015 Text
-name S "ForgotText"
-pos V 10.0 1190.0
-text S "Forgot your password?"
-color C 0.490 0.440 1.000 1.000
-wrapWidth F 0.0
-align I 1
-useCustomColor B 1
-offset V 0.0 0.0
-fontScale F 0.80
-customStyle B 0
-framePadding V 0.0 0.0
-frameRounding F 0.0
-borderSize F 0.0
-borderColor C 0.300 0.300 0.350 1.000
-bgColor C 0.000 0.000 0.000 0.000
-end
-node 1016 Separator
-name S "Separator"
-pos V 10.0 1260.0
-thickness F 1.0
-align I 0
-offset V 0.0 0.0
-separatorColor C 0.180 0.190 0.230 1.000
-useCustomSeparatorColor B 0
-customStyle B 0
-framePadding V 0.0 0.0
-frameRounding F 0.0
-borderSize F 0.0
-borderColor C 0.300 0.300 0.350 1.000
-end
-node 1017 Text
 name S "OrText"
-pos V 10.0 1330.0
-text S "Or continue with"
+pos V 10.0 1150.0
+text S "   or   "
 color C 0.450 0.460 0.500 1.000
 wrapWidth F 0.0
 align I 1
@@ -275,7 +266,7 @@ bgColor C 0.000 0.000 0.000 0.000
 end
 node 1018 Row
 name S "SocialRow"
-pos V 10.0 1380.0
+pos V 10.0 1200.0
 hasBg I 0
 padding F 0.0
 widthMode I 0
@@ -283,13 +274,13 @@ heightMode I 0
 fixedSize V 200.0 100.0
 justify I 1
 align I 0
-spacing F 12.0
+spacing F 16.0
 end
 node 1019 Button
 name S "GoogleBtn"
-pos V 50.0 1460.0
-label S "Google"
-buttonSize V 130.0 40.0
+pos V 50.0 1270.0
+label S "   Google"
+buttonSize V 140.0 42.0
 disabled B 0
 align I 0
 offset V 0.0 0.0
@@ -308,9 +299,9 @@ framePadding V 0.0 0.0
 end
 node 1020 Button
 name S "GitHubBtn"
-pos V 200.0 1460.0
-label S "GitHub"
-buttonSize V 130.0 40.0
+pos V 210.0 1270.0
+label S "   GitHub"
+buttonSize V 140.0 42.0
 disabled B 0
 align I 0
 offset V 0.0 0.0
@@ -341,13 +332,12 @@ link 1028 10070002 10030002
 link 1029 10080002 10030002
 link 1030 10090002 10030002
 link 1031 10100002 10030002
-link 1032 10110002 10030002
-link 1033 10120002 10030002
-link 1034 10140002 10030002
-link 1035 10150002 10030002
-link 1036 10160002 10030002
-link 1037 10170002 10030002
-link 1038 10180100 10030002
-link 1039 10190002 10180002
-link 1040 10200002 10180002
-link 1041 10010100 10210001
+link 1032 10110100 10030002
+link 1033 10120002 10110002
+link 1034 10130002 10110002
+link 1035 10140002 10030002
+link 1036 10150002 10030002
+link 1037 10180100 10030002
+link 1038 10190002 10180002
+link 1039 10200002 10180002
+link 1040 10010100 10210001
