@@ -1,0 +1,362 @@
+nextId 1050
+node 1000 Theme
+name S "Theme"
+pos V 80.0 30.0
+primary C 0.490 0.440 1.000 1.000
+primaryHover C 0.560 0.510 1.000 1.000
+bgColor C 0.090 0.090 0.110 1.000
+titleBg C 0.070 0.070 0.090 1.000
+textColor C 0.950 0.950 0.960 1.000
+borderColor C 0.160 0.160 0.190 1.000
+checkMark C 0.545 0.486 1.000 1.000
+sliderGrab C 0.545 0.486 1.000 1.000
+sliderGrabActive C 0.600 0.550 1.000 1.000
+separator C 0.180 0.190 0.230 1.000
+scrollbarGrab C 0.200 0.200 0.230 1.000
+scrollbarBg C 0.070 0.070 0.080 1.000
+popupBg C 0.100 0.110 0.140 0.950
+tabActive C 0.392 0.361 0.702 1.000
+tabHovered C 0.240 0.270 0.380 1.000
+tab C 0.100 0.110 0.140 1.000
+dockingPreview C 0.350 0.550 0.850 0.500
+windowBg C 0.100 0.110 0.130 1.000
+fontSize F 15.0
+rounding F 10.0
+themeSpacing F 8.0
+borderWidth F 0.0
+scrollbarSize F 12.0
+disabledText C 0.500 0.500 0.550 0.500
+disabledBg C 0.250 0.250 0.250 0.400
+frameBgHover C 0.180 0.200 0.250 1.000
+frameBgActive C 0.220 0.250 0.300 1.000
+primaryActive C 0.400 0.360 0.850 1.000
+titleText C 0.950 0.950 0.960 1.000
+end
+node 1001 Window
+name S "Login"
+pos V 860.0 170.0
+title S "Login"
+windowSize V 400.0 680.0
+flags I 11
+framePadding V 0.0 0.0
+end
+node 1003 Column
+name S "Column"
+pos V 200.0 120.0
+hasBg I 0
+padding F 28.0
+widthMode I 0
+heightMode I 0
+fixedSize V 200.0 100.0
+justify I 0
+align I 0
+spacing F 8.0
+width F 0.0
+end
+node 1004 Text
+name S "Welcome"
+pos V 10.0 480.0
+text S "Welcome back"
+color C 0.950 0.950 0.960 1.000
+wrapWidth F 0.0
+align I 0
+useCustomColor B 0
+offset V 0.0 0.0
+fontScale F 1.80
+customStyle B 0
+framePadding V 0.0 0.0
+frameRounding F 0.0
+borderSize F 0.0
+borderColor C 0.300 0.300 0.350 1.000
+bgColor C 0.000 0.000 0.000 0.000
+end
+node 1005 Text
+name S "Subtitle"
+pos V 10.0 560.0
+text S "Sign in to continue to your dashboard."
+color C 0.550 0.560 0.600 1.000
+wrapWidth F 0.0
+align I 0
+useCustomColor B 1
+offset V 0.0 0.0
+fontScale F 0.80
+customStyle B 0
+framePadding V 0.0 0.0
+frameRounding F 0.0
+borderSize F 0.0
+borderColor C 0.300 0.300 0.350 1.000
+bgColor C 0.000 0.000 0.000 0.000
+end
+node 1006 Spacer
+name S "Spacer"
+pos V 10.0 640.0
+widgetSize V 0.0 20.0
+align I 0
+offset V 0.0 0.0
+end
+node 1007 Text
+name S "EmailLabel"
+pos V 10.0 720.0
+text S "Email address"
+color C 0.550 0.560 0.600 1.000
+wrapWidth F 0.0
+align I 0
+useCustomColor B 1
+offset V 0.0 0.0
+fontScale F 0.75
+customStyle B 0
+framePadding V 0.0 0.0
+frameRounding F 0.0
+borderSize F 0.0
+borderColor C 0.300 0.300 0.350 1.000
+bgColor C 0.000 0.000 0.000 0.000
+end
+node 1008 InputText
+name S "EmailInput"
+pos V 10.0 790.0
+label S "##email"
+text S ""
+maxLength I 256
+password B 0
+align I 0
+offset V 0.0 0.0
+width F 0.0
+height F 0.0
+framePadding V 14.0 12.0
+borderColor C 0.369 0.302 0.624 0.976
+borderSize F 1.0
+rounding F 10.0
+customStyle B 1
+bgColor C 0.090 0.090 0.110 1.000
+bgHoverColor C 0.120 0.120 0.150 1.000
+bgActiveColor C 0.090 0.090 0.110 1.000
+borderHoverColor C 0.474 0.389 0.796 0.976
+borderActiveColor C 0.522 0.431 0.873 0.976
+textColor C 1.000 1.000 1.000 1.000
+fontScale F 1.00
+end
+node 1009 Text
+name S "PassLabel"
+pos V 10.0 870.0
+text S "Password"
+color C 0.550 0.560 0.600 1.000
+wrapWidth F 0.0
+align I 0
+useCustomColor B 1
+offset V 0.0 0.0
+fontScale F 0.75
+customStyle B 0
+framePadding V 0.0 0.0
+frameRounding F 0.0
+borderSize F 0.0
+borderColor C 0.300 0.300 0.350 1.000
+bgColor C 0.000 0.000 0.000 0.000
+end
+node 1010 InputText
+name S "PassInput"
+pos V 10.0 940.0
+label S "##pass"
+text S ""
+maxLength I 256
+password B 1
+align I 0
+offset V 0.0 0.0
+width F 0.0
+height F 0.0
+framePadding V 14.0 12.0
+borderColor C 0.369 0.302 0.624 0.976
+borderSize F 1.0
+rounding F 10.0
+customStyle B 1
+bgColor C 0.090 0.090 0.110 1.000
+bgHoverColor C 0.120 0.120 0.150 1.000
+bgActiveColor C 0.090 0.090 0.110 1.000
+borderHoverColor C 0.474 0.389 0.796 0.976
+borderActiveColor C 0.522 0.431 0.873 0.976
+textColor C 1.000 1.000 1.000 1.000
+fontScale F 1.00
+end
+node 1011 Row
+name S "Row"
+pos V 10.0 1010.0
+hasBg I 0
+padding F 0.0
+widthMode I 0
+heightMode I 0
+fixedSize V 200.0 100.0
+justify I 0
+align I 0
+spacing F 12.0
+end
+node 1012 Checkbox
+name S "Remember"
+pos V 100.0 1120.0
+label S "Remember me"
+checked B 1
+align I 0
+offset V 0.0 0.0
+scale F 1.00
+customStyle B 1
+framePadding V 0.0 0.0
+frameRounding F 4.0
+borderSize F 0.0
+borderColor C 0.300 0.300 0.350 1.000
+borderHoverColor C 0.500 0.500 0.550 1.000
+borderActiveColor C 0.200 0.200 0.250 1.000
+bgColor C 0.490 0.440 1.000 1.000
+bgHoverColor C 0.560 0.510 1.000 1.000
+bgActiveColor C 0.400 0.360 0.900 1.000
+textColor C 0.850 0.850 0.920 1.000
+fontScale F 0.85
+end
+node 1013 Button
+name S "ForgotBtn"
+pos V 250.0 1120.0
+label S "Forgot?"
+buttonSize V 0.0 0.0
+disabled B 0
+align I 2
+offset V 0.0 0.0
+customStyle B 1
+bgColor C 0.000 0.000 0.000 0.000
+bgHoverColor C 0.490 0.440 1.000 0.100
+bgActiveColor C 0.490 0.440 1.000 0.200
+borderColor C 0.500 0.500 0.600 1.000
+borderHoverColor C 0.700 0.700 0.800 1.000
+borderActiveColor C 0.400 0.400 0.500 1.000
+borderSize F 0.0
+frameRounding F 4.0
+textColor C 0.490 0.440 1.000 1.000
+fontScale F 0.85
+framePadding V 0.0 0.0
+end
+node 1014 Button
+name S "SignInBtn"
+pos V 10.0 1170.0
+label S "Sign In"
+buttonSize V 0.0 48.0
+disabled B 0
+align I 0
+offset V 0.0 0.0
+customStyle B 1
+bgColor C 0.490 0.440 1.000 1.000
+bgHoverColor C 0.560 0.510 1.000 1.000
+bgActiveColor C 0.400 0.360 0.900 1.000
+borderColor C 0.500 0.500 0.600 1.000
+borderHoverColor C 0.700 0.700 0.800 1.000
+borderActiveColor C 0.400 0.400 0.500 1.000
+borderSize F 0.0
+frameRounding F 12.0
+textColor C 1.000 1.000 1.000 1.000
+fontScale F 1.05
+framePadding V 16.0 12.0
+end
+node 1015 Separator
+name S "Separator"
+pos V 10.0 1280.0
+thickness F 1.0
+align I 0
+offset V 0.0 0.0
+separatorColor C 0.180 0.190 0.230 1.000
+useCustomSeparatorColor B 0
+customStyle B 0
+framePadding V 0.0 0.0
+frameRounding F 0.0
+borderSize F 0.0
+borderColor C 0.300 0.300 0.350 1.000
+end
+node 1016 Text
+name S "OrText"
+pos V 10.0 1350.0
+text S "Or continue with"
+color C 0.450 0.460 0.500 1.000
+wrapWidth F 0.0
+align I 1
+useCustomColor B 1
+offset V 0.0 0.0
+fontScale F 0.70
+customStyle B 0
+framePadding V 0.0 0.0
+frameRounding F 0.0
+borderSize F 0.0
+borderColor C 0.300 0.300 0.350 1.000
+bgColor C 0.000 0.000 0.000 0.000
+end
+node 1017 Row
+name S "SocialRow"
+pos V 10.0 1410.0
+hasBg I 0
+padding F 0.0
+widthMode I 0
+heightMode I 0
+fixedSize V 200.0 100.0
+justify I 0
+align I 0
+spacing F 12.0
+end
+node 1018 Button
+name S "GoogleBtn"
+pos V 10.0 1490.0
+label S "Google"
+buttonSize V 110.0 40.0
+disabled B 0
+align I 0
+offset V 0.0 0.0
+customStyle B 1
+bgColor C 0.120 0.130 0.160 1.000
+bgHoverColor C 0.150 0.160 0.190 1.000
+bgActiveColor C 0.100 0.110 0.140 1.000
+borderColor C 0.250 0.260 0.320 1.000
+borderHoverColor C 0.350 0.360 0.420 1.000
+borderActiveColor C 0.200 0.210 0.280 1.000
+borderSize F 1.0
+frameRounding F 8.0
+textColor C 0.850 0.850 0.920 1.000
+fontScale F 0.90
+framePadding V 0.0 0.0
+end
+node 1019 Button
+name S "GitHubBtn"
+pos V 140.0 1490.0
+label S "GitHub"
+buttonSize V 110.0 40.0
+disabled B 0
+align I 0
+offset V 0.0 0.0
+customStyle B 1
+bgColor C 0.120 0.130 0.160 1.000
+bgHoverColor C 0.150 0.160 0.190 1.000
+bgActiveColor C 0.100 0.110 0.140 1.000
+borderColor C 0.250 0.260 0.320 1.000
+borderHoverColor C 0.350 0.360 0.420 1.000
+borderActiveColor C 0.200 0.210 0.280 1.000
+borderSize F 1.0
+frameRounding F 8.0
+textColor C 0.850 0.850 0.920 1.000
+fontScale F 0.90
+framePadding V 0.0 0.0
+end
+node 1020 Preview
+name S "Preview"
+pos V 1650.0 250.0
+end
+link 1021 10000001 10010001
+link 1022 10000001 10030001
+link 1023 10030100 10010002
+link 1024 10040002 10030002
+link 1025 10050002 10030002
+link 1026 10060002 10030002
+link 1027 10070002 10030002
+link 1028 10080002 10030002
+link 1029 10090002 10030002
+link 1030 10100002 10030002
+link 1031 10110100 10030002
+link 1032 10120002 10110002
+link 1033 10130002 10110002
+link 1034 10140002 10030002
+link 1035 10150002 10030002
+link 1036 10160002 10030002
+link 1037 10170100 10030002
+link 1038 10180002 10170002
+link 1039 10190002 10170002
+link 1040 10010100 10200001
