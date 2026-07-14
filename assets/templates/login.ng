@@ -222,9 +222,9 @@ padding F 0.0
 widthMode I 0
 heightMode I 0
 fixedSize V 200.0 100.0
-justify I 3
+justify I 0
 align I 0
-spacing F 12.0
+spacing F 30.0
 end
 node 1014 Button
 name S "SignInBtn"
