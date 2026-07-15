@@ -62,8 +62,6 @@ private:
 
     ImVec2 m_CanvasOrigin;
     float m_Zoom = 1.0f;
-    float m_TargetZoom = 1.0f;
-    ImVec2 m_ZoomAnchor;  // canvas-space point to keep fixed during zoom
 
     bool m_Panning;
     ImVec2 m_PanStart;
