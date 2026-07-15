@@ -64,6 +64,7 @@ private:
     float m_Zoom = 1.0f;
     float m_TargetZoom = 1.0f;
     ImVec2 m_ZoomAnchor;
+    ImVec2 m_ZoomMousePos;
 
     bool m_Panning;
     ImVec2 m_PanStart;
