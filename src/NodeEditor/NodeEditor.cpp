@@ -737,6 +737,8 @@ void NodeEditor::HandleLinkDrop(ImVec2 mouse, bool hovered) {
                         Node* srcN = GetNodeByPinId(src);
                         Node* dstN = GetNodeByPinId(dst);
                         if (srcN && dstN) {
+                            if (srcN->m_Id == dstN->m_Id)
+                                valid = false;
                             if (strcmp(srcN->GetTypeName(), "TabItem") == 0 && strcmp(dstN->GetTypeName(), "TabBar") != 0)
                                 valid = false;
                             if (strcmp(srcN->GetTypeName(), "SubMenu") == 0 && 

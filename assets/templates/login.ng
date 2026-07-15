@@ -318,6 +318,13 @@ textColor C 0.850 0.850 0.920 1.000
 fontScale F 0.90
 framePadding V 0.0 0.0
 end
+node 1030 Animation
+name S "AnimCheckbox"
+pos V 710.0 410.0
+duration F 0.350
+easing S "EaseOutBack"
+customPoints V 0.250 0.150 0.750 0.850
+end
 node 1021 Preview
 name S "Preview"
 pos V 1650.0 250.0
@@ -340,3 +347,4 @@ link 1037 10180100 10030002
 link 1038 10190002 10180002
 link 1039 10200002 10180002
 link 1040 10010100 10210001
+link 1041 10300002 10120003
