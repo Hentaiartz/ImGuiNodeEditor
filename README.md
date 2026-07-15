@@ -17,10 +17,6 @@
 
 ## 📸 Screenshots
 
----
-
-## 📸 Screenshots
-
 <div align="center">
 <img src="assets/screenshots/Animation.gif" alt="Animation Demo" width="600"/>
 <p><em>Animated checkbox with EaseOutBack easing</em></p>
