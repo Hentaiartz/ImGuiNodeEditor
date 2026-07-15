@@ -905,6 +905,7 @@ Pin* NodeEditor::GetPinById(int id) const {
 void NodeEditor::NewProject() {
     m_Nodes.clear();
     m_Links.clear();
+    m_Regions.clear();
     m_ComponentStack.clear();
     m_SelectedNodeId = -1;
     m_SelectedLinkId = -1;
@@ -1141,12 +1142,21 @@ std::string NodeEditor::SerializeState() const {
     for (auto& link : GetActiveLinks())
         out += "link " + std::to_string(link.id) + " " +
                std::to_string(link.fromPinId) + " " + std::to_string(link.toPinId) + "\n";
+    for (auto& reg : m_Regions) {
+        char buf[512];
+        snprintf(buf, sizeof(buf), "region %d %.1f %.1f %.1f %.1f %.3f %.3f %.3f %.3f %d \"%s\"\n",
+            reg.id, reg.pos.x, reg.pos.y, reg.size.x, reg.size.y,
+            reg.color.x, reg.color.y, reg.color.z, reg.color.w,
+            (int)reg.collapsed, reg.name.c_str());
+        out += buf;
+    }
     return out;
 }
 
 void NodeEditor::DeserializeState(const std::string& s) {
     GetActiveNodes().clear();
     GetActiveLinks().clear();
+    m_Regions.clear();
     m_SelectedNodeId = -1;
     m_SelectedLinkId = -1;
 
@@ -1188,6 +1198,18 @@ void NodeEditor::DeserializeState(const std::string& s) {
         Link l;
         if (sscanf(line.c_str(), "link %d %d %d", &l.id, &l.fromPinId, &l.toPinId) == 3)
             GetActiveLinks().push_back(l);
+
+        Region r;
+        int rCollapsed = 0;
+        char rName[128];
+        if (sscanf(line.c_str(), "region %d %f %f %f %f %f %f %f %f %d \"%127[^\"]\"",
+            &r.id, &r.pos.x, &r.pos.y, &r.size.x, &r.size.y,
+            &r.color.x, &r.color.y, &r.color.z, &r.color.w,
+            &rCollapsed, rName) >= 11) {
+            r.collapsed = rCollapsed != 0;
+            r.name = rName;
+            m_Regions.push_back(r);
+        }
     }
 
     // Migrate old-format links (id*100+N → id*10000+N)
@@ -1246,6 +1268,11 @@ void NodeEditor::SaveToFile(const char* path) {
     }
     for (auto& link : m_Links)
         fprintf(f, "link %d %d %d\n", link.id, link.fromPinId, link.toPinId);
+    for (auto& reg : m_Regions)
+        fprintf(f, "region %d %.1f %.1f %.1f %.1f %.3f %.3f %.3f %.3f %d \"%s\"\n",
+            reg.id, reg.pos.x, reg.pos.y, reg.size.x, reg.size.y,
+            reg.color.x, reg.color.y, reg.color.z, reg.color.w,
+            (int)reg.collapsed, reg.name.c_str());
     fclose(f);
 }
 
@@ -1255,6 +1282,7 @@ void NodeEditor::LoadFromFile(const char* path) {
     m_ComponentStack.clear();
     m_Nodes.clear();
     m_Links.clear();
+    m_Regions.clear();
     m_SelectedNodeId = -1;
     m_SelectedLinkId = -1;
 
@@ -1305,6 +1333,18 @@ void NodeEditor::LoadFromFile(const char* path) {
         Link l;
         if (sscanf(line, "link %d %d %d", &l.id, &l.fromPinId, &l.toPinId) == 3)
             m_Links.push_back(l);
+
+        Region r;
+        int rCollapsed = 0;
+        char rName[128];
+        if (sscanf(line, "region %d %f %f %f %f %f %f %f %f %d \"%127[^\"]\"",
+            &r.id, &r.pos.x, &r.pos.y, &r.size.x, &r.size.y,
+            &r.color.x, &r.color.y, &r.color.z, &r.color.w,
+            &rCollapsed, rName) >= 11) {
+            r.collapsed = rCollapsed != 0;
+            r.name = rName;
+            m_Regions.push_back(r);
+        }
     }
     fclose(f);
     m_SearchSpawnPos = ImVec2(100, 100);
