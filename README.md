@@ -22,14 +22,14 @@
 ## 📸 Screenshots
 
 <div align="center">
-<img src="assets/screenshots/editor-overview.png" alt="Editor Overview" width="700"/>
+<img src="assets/screenshots/Animation.gif" alt="Animation Demo" width="600"/>
+<p><em>Animated checkbox with EaseOutBack easing</em></p>
+
+<img src="assets/screenshots/editor-overview.png" alt="Editor Overview" width="600"/>
 <p><em>Full editor layout with a login form template</em></p>
 
-<img src="assets/screenshots/preview-window.png" alt="Live Preview" width="700"/>
+<img src="assets/screenshots/preview-window.png" alt="Live Preview" width="600"/>
 <p><em>Live preview of the login window with themed colors</em></p>
-
-<img src="assets/screenshots/Animation.gif" alt="Animation Demo" width="700"/>
-<p><em>Animated checkbox with EaseOutBack easing</em></p>
 </div>
 
 ---
