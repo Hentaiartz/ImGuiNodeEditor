@@ -17,16 +17,6 @@
 
 ## 📸 Screenshots
 
-> Add your screenshots here:
-> 
-> **`assets/screenshots/editor-overview.png`** — Full editor layout with a sample graph
-> 
-> **`assets/screenshots/preview-window.png`** — Live preview of a window with widgets
-> 
-> **`assets/screenshots/animation-editor.png`** — Animation node with custom spline editor
-
-*(Place images in `assets/screenshots/` and reference them as `![alt](assets/screenshots/file.png)`)*
-
 ---
 
 ## 📸 Screenshots
