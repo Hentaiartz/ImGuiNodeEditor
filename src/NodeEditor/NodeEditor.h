@@ -61,7 +61,8 @@ private:
     int m_NextId = 1;
 
     ImVec2 m_CanvasOrigin;
-    float m_Zoom;
+    float m_Zoom = 1.0f;
+    float m_TargetZoom = 1.0f;
 
     bool m_Panning;
     ImVec2 m_PanStart;

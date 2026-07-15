@@ -132,6 +132,19 @@ void NodeEditor::DrawNode(Node* node, ImDrawList* dl) {
             ImColor(t.selection.x, t.selection.y, t.selection.z, borderAlpha), r, 0, 2.0f * z);
     }
 
+    // Drop shadow
+    {
+        float shadowOff = 4.0f * m_Zoom;
+        float shadowBlur = 8.0f * m_Zoom;
+        ImU32 shadowCol = IM_COL32(0, 0, 0, (int)(55 * (m_Zoom / 1.5f)));
+        dl->AddRectFilled(pos + ImVec2(shadowOff, shadowOff),
+            pos + size + ImVec2(shadowOff + shadowBlur, shadowOff + shadowBlur),
+            (shadowCol & 0x00FFFFFF) | ((int)((shadowCol >> 24) * 0.5f) << 24), r);
+        dl->AddRectFilled(pos + ImVec2(shadowOff, shadowOff),
+            pos + size + ImVec2(shadowOff, shadowOff),
+            shadowCol, r);
+    }
+
     // Body gradient (lighter top → darker bottom)
     ImVec4 bc = t.nodeBody;
     ImU32 bodyTop = IM_COL32(

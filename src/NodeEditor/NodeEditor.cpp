@@ -67,6 +67,11 @@ void NodeEditor::Draw() {
     ImRect canvasRect(ImGui::GetWindowPos(), ImGui::GetWindowPos() + ImGui::GetWindowSize());
     ImDrawList* dl = ImGui::GetWindowDrawList();
 
+    // Smooth zoom interpolation
+    if (fabs(m_Zoom - m_TargetZoom) > 0.001f) {
+        m_Zoom += (m_TargetZoom - m_Zoom) * ImGui::GetIO().DeltaTime * 12.0f;
+        if (fabs(m_Zoom - m_TargetZoom) < 0.001f) m_Zoom = m_TargetZoom;
+    }
 
     if (m_Placing)
         ImGui::SetMouseCursor(ImGuiMouseCursor_ResizeAll);
@@ -136,6 +141,16 @@ void NodeEditor::Draw() {
         ImGui::PopStyleVar();
         ImGui::SameLine(0, 12);
         ImGui::TextDisabled("(sub-canvas)");
+    }
+
+    // Pin tooltip on hover
+    if (m_HoveredPinId >= 0) {
+        Pin* pin = GetPinById(m_HoveredPinId);
+        if (pin) {
+            ImGui::BeginTooltip();
+            ImGui::TextUnformatted(pin->name.c_str());
+            ImGui::EndTooltip();
+        }
     }
 
     // ── Minimap (always inside content area, top-right) ──
@@ -502,7 +517,7 @@ void NodeEditor::HandleZoomPan(bool hovered) {
     if (ImGui::IsWindowHovered() || hovered) {
         if (ImGui::IsWindowHovered() && io.MouseWheel != 0) {
             ImVec2 oldMC = ScreenToCanvas(io.MousePos);
-            m_Zoom = std::clamp(m_Zoom + io.MouseWheel * 0.1f * m_Zoom, 0.2f, 4.0f);
+            m_TargetZoom = std::clamp(m_Zoom + io.MouseWheel * 0.1f * m_Zoom, 0.2f, 4.0f);
             m_CanvasOrigin += (ScreenToCanvas(io.MousePos) - oldMC) * m_Zoom;
         }
         if (ImGui::IsMouseClicked(2)) {
