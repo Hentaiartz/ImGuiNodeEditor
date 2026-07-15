@@ -1,7 +1,7 @@
-nextId 1050
+nextId 1054
 node 1000 Theme
 name S "Theme"
-pos V 80.0 30.0
+pos V 149.0 62.0
 primary C 0.490 0.440 1.000 1.000
 primaryHover C 0.560 0.510 1.000 1.000
 bgColor C 0.090 0.090 0.110 1.000
@@ -20,29 +20,29 @@ tabHovered C 0.240 0.270 0.380 1.000
 tab C 0.100 0.110 0.140 1.000
 dockingPreview C 0.350 0.550 0.850 0.500
 windowBg C 0.100 0.110 0.130 1.000
-fontSize F 15.0
-rounding F 10.0
-themeSpacing F 8.0
-borderWidth F 0.0
-scrollbarSize F 12.0
 disabledText C 0.500 0.500 0.550 0.500
 disabledBg C 0.250 0.250 0.250 0.400
 frameBgHover C 0.180 0.200 0.250 1.000
 frameBgActive C 0.220 0.250 0.300 1.000
 primaryActive C 0.400 0.360 0.850 1.000
 titleText C 0.950 0.950 0.960 1.000
+fontSize F 15.0
+rounding F 10.0
+themeSpacing F 8.0
+borderWidth F 0.0
+scrollbarSize F 12.0
 end
 node 1001 Window
 name S "Login"
-pos V 860.0 170.0
+pos V 405.0 197.0
 title S "Login"
-windowSize V 400.0 620.0
+windowSize V 410.0 550.0
 flags I 11
 framePadding V 0.0 0.0
 end
 node 1003 Column
 name S "Column"
-pos V 200.0 120.0
+pos V 136.0 216.0
 hasBg I 0
 padding F 28.0
 widthMode I 0
@@ -55,7 +55,7 @@ width F 0.0
 end
 node 1004 Text
 name S "Welcome"
-pos V 10.0 480.0
+pos V -285.0 -112.0
 text S "Welcome back"
 color C 0.950 0.950 0.960 1.000
 wrapWidth F 0.0
@@ -72,7 +72,7 @@ bgColor C 0.000 0.000 0.000 0.000
 end
 node 1005 Text
 name S "Subtitle"
-pos V 10.0 560.0
+pos V -288.0 -22.9
 text S "Sign in to continue."
 color C 0.600 0.610 0.650 1.000
 wrapWidth F 0.0
@@ -89,14 +89,14 @@ bgColor C 0.000 0.000 0.000 0.000
 end
 node 1006 Spacer
 name S "Spacer1"
-pos V 10.0 640.0
+pos V -288.0 75.3
 widgetSize V 0.0 24.0
 align I 0
 offset V 0.0 0.0
 end
 node 1007 Text
 name S "EmailLabel"
-pos V 10.0 720.0
+pos V -284.9 161.2
 text S "Email address"
 color C 0.600 0.610 0.650 1.000
 wrapWidth F 0.0
@@ -113,7 +113,7 @@ bgColor C 0.000 0.000 0.000 0.000
 end
 node 1008 InputText
 name S "EmailInput"
-pos V 10.0 790.0
+pos V -283.9 254.3
 label S "##email"
 text S ""
 maxLength I 256
@@ -121,7 +121,7 @@ password B 0
 align I 0
 offset V 0.0 0.0
 width F 344.0
-height F 0.0
+height F 35.0
 framePadding V 14.0 8.0
 borderColor C 0.300 0.300 0.350 1.000
 borderSize F 1.0
@@ -137,7 +137,7 @@ fontScale F 1.00
 end
 node 1009 Text
 name S "PassLabel"
-pos V 10.0 870.0
+pos V -285.0 337.1
 text S "Password"
 color C 0.600 0.610 0.650 1.000
 wrapWidth F 0.0
@@ -154,7 +154,7 @@ bgColor C 0.000 0.000 0.000 0.000
 end
 node 1010 InputText
 name S "PassInput"
-pos V 10.0 940.0
+pos V -285.0 415.9
 label S "##pass"
 text S ""
 maxLength I 256
@@ -162,7 +162,7 @@ password B 1
 align I 0
 offset V 0.0 0.0
 width F 344.0
-height F 0.0
+height F 35.0
 framePadding V 14.0 8.0
 borderColor C 0.300 0.300 0.350 1.000
 borderSize F 1.0
@@ -176,59 +176,9 @@ borderActiveColor C 0.490 0.440 1.000 1.000
 textColor C 1.000 1.000 1.000 1.000
 fontScale F 1.00
 end
-node 1011 Row
-name S "RememberRow"
-pos V 276.0 821.0
-hasBg I 0
-padding F 0.0
-widthMode I 0
-heightMode I 0
-fixedSize V 200.0 100.0
-justify I 3
-align I 0
-spacing F 12.0
-end
-node 1012 Checkbox
-name S "Remember"
-pos V 10.0 1020.0
-label S "Remember me"
-checked B 1
-align I 0
-offset V 0.0 0.0
-scale F 1.00
-customStyle B 1
-framePadding V 0.0 0.0
-frameRounding F 4.0
-borderSize F 0.0
-borderColor C 0.300 0.300 0.350 1.000
-borderHoverColor C 0.500 0.500 0.550 1.000
-borderActiveColor C 0.200 0.200 0.250 1.000
-bgColor C 0.490 0.440 1.000 1.000
-bgHoverColor C 0.560 0.510 1.000 1.000
-bgActiveColor C 0.400 0.360 0.900 1.000
-textColor C 0.750 0.750 0.820 1.000
-fontScale F 0.85
-end
-node 1013 Text
-name S "ForgotText"
-pos V 10.0 1020.0
-text S "Forgot your password?"
-color C 0.700 0.650 1.000 1.000
-wrapWidth F 0.0
-align I 0
-useCustomColor B 1
-offset V 0.0 0.0
-fontScale F 0.80
-customStyle B 0
-framePadding V 0.0 0.0
-frameRounding F 0.0
-borderSize F 0.0
-borderColor C 0.300 0.300 0.350 1.000
-bgColor C 0.000 0.000 0.000 0.000
-end
 node 1014 Button
 name S "SignInBtn"
-pos V 10.0 1100.0
+pos V -287.1 495.7
 label S "Sign In"
 buttonSize V 344.0 48.0
 disabled B 0
@@ -249,7 +199,7 @@ framePadding V 16.0 12.0
 end
 node 1015 Text
 name S "OrText"
-pos V 10.0 1150.0
+pos V -287.0 577.7
 text S "   or   "
 color C 0.450 0.460 0.500 1.000
 wrapWidth F 0.0
@@ -266,7 +216,7 @@ bgColor C 0.000 0.000 0.000 0.000
 end
 node 1031 Component
 name S "SocialLogin"
-pos V 10.0 1190.0
+pos V -185.9 737.1
 subnext 5
 subnode 1 Row
 _n S "SocialRow"
@@ -282,7 +232,7 @@ _e spacing F 16.0
 subend
 subnode 2 Button
 _n S "GoogleBtn"
-_p V -60.0 60.0
+_p V -31.4 -66.5
 _e label S "   Google"
 _e buttonSize V 140.0 42.0
 _e disabled B 0
@@ -303,7 +253,7 @@ _e framePadding V 0.0 0.0
 subend
 subnode 3 Button
 _n S "GitHubBtn"
-_p V 100.0 60.0
+_p V -15.3 71.2
 _e label S "   GitHub"
 _e buttonSize V 140.0 42.0
 _e disabled B 0
@@ -325,21 +275,91 @@ subend
 subnode 4 ComponentOutput
 _n S "Output"
 _p V 450.0 0.0
+_e childorder 1
 subend
 sublink 5 20002 10002
 sublink 6 30002 10002
 sublink 7 10100 40001
 end
-node 1030 Animation
-name S "AnimCheckbox"
-pos V 710.0 410.0
-duration F 0.350
-easing S "EaseOutBack"
-customPoints V 0.250 0.150 0.750 0.850
-end
 node 1021 Preview
 name S "Preview"
-pos V 1650.0 250.0
+pos V 675.0 199.0
+end
+node 1051 Component
+name S "Remember"
+pos V -177.7 862.9
+subnext 10
+subnode 1 Row
+_n S "Row"
+_p V 29.0 531.3
+_e hasBg I 0
+_e padding F 0.0
+_e widthMode I 0
+_e heightMode I 0
+_e fixedSize V 200.0 100.0
+_e justify I 3
+_e align I 0
+_e spacing F 12.0
+subend
+subnode 2 Checkbox
+_n S "Checkbox"
+_p V -219.0 535.3
+_e label S "Remember me"
+_e checked B 1
+_e align I 0
+_e offset V 0.0 0.0
+_e scale F 1.00
+_e customStyle B 1
+_e framePadding V 0.0 0.0
+_e frameRounding F 4.0
+_e borderSize F 0.0
+_e borderColor C 0.300 0.300 0.350 1.000
+_e borderHoverColor C 0.500 0.500 0.550 1.000
+_e borderActiveColor C 0.200 0.200 0.250 1.000
+_e bgColor C 0.490 0.440 1.000 1.000
+_e bgHoverColor C 0.560 0.510 1.000 1.000
+_e bgActiveColor C 0.400 0.360 0.900 1.000
+_e textColor C 0.750 0.750 0.820 1.000
+_e fontScale F 0.85
+subend
+subnode 3 Text
+_n S "Text"
+_p V -220.0 645.7
+_e text S "Forgot your password?"
+_e color C 0.700 0.650 1.000 1.000
+_e wrapWidth F 0.0
+_e align I 0
+_e useCustomColor B 1
+_e offset V 0.0 0.0
+_e fontScale F 0.80
+_e customStyle B 0
+_e framePadding V 0.0 0.0
+_e frameRounding F 0.0
+_e borderSize F 0.0
+_e borderColor C 0.300 0.300 0.350 1.000
+_e bgColor C 0.000 0.000 0.000 0.000
+subend
+subnode 4 Animation
+_n S "Animation"
+_p V -462.0 534.3
+_e animName S "Anim"
+_e target S ""
+_e duration F 0.350
+_e easing S "EaseOutBack"
+_e cpt V 0.250 0.150
+_e cpt V 0.750 0.850
+_e cpt V 0.250 0.150
+_e cpt V 0.750 0.850
+subend
+subnode 8 ComponentOutput
+_n S "ComponentOutput"
+_p V 280.4 584.4
+_e childorder 1
+subend
+sublink 5 20002 10002
+sublink 6 30002 10002
+sublink 7 40002 20003
+sublink 9 10100 80001
 end
 link 1022 10000001 10010001
 link 1024 10030100 10010002
@@ -350,11 +370,9 @@ link 1028 10070002 10030002
 link 1029 10080002 10030002
 link 1030 10090002 10030002
 link 1031 10100002 10030002
-link 1032 10110100 10030002
-link 1033 10120002 10110002
-link 1034 10130002 10110002
+link 1052 10510002 10030002
 link 1035 10140002 10030002
-link 1036 10150002 10030002
 link 1037 10310100 10030002
 link 1040 10010100 10210001
-link 1041 10300002 10120003
+link 1036 10150002 10030002
+link 1050 10310002 10030002

@@ -334,12 +334,17 @@ void Application::InitImGui() {
     LoadConfig(s_Config);
     ApplyConfig(s_Config);
 
-    // Load Inter + Font Awesome merged (TTF only - stb_truetype doesn't support OTF)
-    const char* assetDir = ASSETS_DIR;
+    // Load fonts from assets/ — try exe-relative first, then parent (dev build)
     char interPath[1024], faPath[1024], faRegPath[1024];
-    snprintf(interPath, sizeof(interPath), "%s/fonts/Inter/Inter-VariableFont_opsz,wght.ttf", assetDir);
-    snprintf(faPath, sizeof(faPath), "%s/fonts/fa-solid-900.ttf", assetDir);
-    snprintf(faRegPath, sizeof(faRegPath), "%s/fonts/fa-regular-400.ttf", assetDir);
+    snprintf(interPath, sizeof(interPath), "%s\\..\\assets\\fonts\\Inter\\Inter-VariableFont_opsz,wght.ttf", exePath);
+    snprintf(faPath, sizeof(faPath), "%s\\..\\assets\\fonts\\fa-solid-900.ttf", exePath);
+    snprintf(faRegPath, sizeof(faRegPath), "%s\\..\\assets\\fonts\\fa-regular-400.ttf", exePath);
+    // Fallback: if not found (release layout), look alongside exe
+    if (GetFileAttributesA(interPath) == INVALID_FILE_ATTRIBUTES) {
+        snprintf(interPath, sizeof(interPath), "%s\\assets\\fonts\\Inter\\Inter-VariableFont_opsz,wght.ttf", exePath);
+        snprintf(faPath, sizeof(faPath), "%s\\assets\\fonts\\fa-solid-900.ttf", exePath);
+        snprintf(faRegPath, sizeof(faRegPath), "%s\\assets\\fonts\\fa-regular-400.ttf", exePath);
+    }
     ImFont* mainFont = ImGui::GetIO().Fonts->AddFontFromFileTTF(interPath, 15.0f);
     if (!mainFont)
         mainFont = ImGui::GetIO().Fonts->AddFontDefault();

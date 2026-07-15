@@ -146,7 +146,6 @@ add_executable(ImGuiNodeEditor ${SOURCES} ${HEADERS})
 
 target_compile_definitions(ImGuiNodeEditor PRIVATE IMGUI_IMPL_OPENGL_LOADER_GLAD)
 target_compile_definitions(ImGuiNodeEditor PRIVATE IMGUI_DEFINE_MATH_OPERATORS)
-target_compile_definitions(ImGuiNodeEditor PRIVATE ASSETS_DIR="${CMAKE_SOURCE_DIR}/assets")
 
 target_include_directories(ImGuiNodeEditor PRIVATE
     ${CMAKE_SOURCE_DIR}/src
