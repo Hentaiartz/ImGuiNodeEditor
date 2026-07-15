@@ -67,6 +67,13 @@ void NodeEditor::Draw() {
     ImRect canvasRect(ImGui::GetWindowPos(), ImGui::GetWindowPos() + ImGui::GetWindowSize());
     ImDrawList* dl = ImGui::GetWindowDrawList();
 
+    // Smooth zoom (soft interpolation, keeps mouse point fixed)
+    if (fabs(m_Zoom - m_TargetZoom) > 0.0001f) {
+        m_Zoom += (m_TargetZoom - m_Zoom) * std::min(ImGui::GetIO().DeltaTime * 25.0f, 1.0f);
+        if (fabs(m_Zoom - m_TargetZoom) < 0.0005f) m_Zoom = m_TargetZoom;
+        m_CanvasOrigin = ImGui::GetIO().MousePos - m_ZoomAnchor * m_Zoom;
+    }
+
     if (m_Placing)
         ImGui::SetMouseCursor(ImGuiMouseCursor_ResizeAll);
 
@@ -510,7 +517,14 @@ void NodeEditor::HandleZoomPan(bool hovered) {
     ImGuiIO& io = ImGui::GetIO();
     if (ImGui::IsWindowHovered() || hovered) {
         if (ImGui::IsWindowHovered() && io.MouseWheel != 0) {
-            m_Zoom = std::clamp(m_Zoom + io.MouseWheel * 0.1f * m_Zoom, 0.2f, 4.0f);
+            float oldZoom = m_Zoom;
+            m_TargetZoom = std::clamp(m_Zoom + io.MouseWheel * 0.1f * m_Zoom, 0.2f, 4.0f);
+            m_ZoomAnchor = ScreenToCanvas(io.MousePos);
+            if (io.MousePos.x >= ImGui::GetWindowPos().x && io.MousePos.y >= ImGui::GetWindowPos().y) {
+                m_Zoom = m_TargetZoom;
+                m_CanvasOrigin = io.MousePos - m_ZoomAnchor * m_TargetZoom;
+                m_Zoom = oldZoom;
+            }
         }
         if (ImGui::IsMouseClicked(2)) {
             m_Panning = true;
