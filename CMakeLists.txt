@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(ImGuiNodeEditor VERSION 1.0.0 LANGUAGES CXX)
+project(ImForge VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -142,25 +142,25 @@ set(HEADERS
     src/nodes/widgets/ComponentOutputNode.h
 )
 
-add_executable(ImGuiNodeEditor ${SOURCES} ${HEADERS})
+add_executable(ImForge ${SOURCES} ${HEADERS})
 
-target_compile_definitions(ImGuiNodeEditor PRIVATE IMGUI_IMPL_OPENGL_LOADER_GLAD)
-target_compile_definitions(ImGuiNodeEditor PRIVATE IMGUI_DEFINE_MATH_OPERATORS)
+target_compile_definitions(ImForge PRIVATE IMGUI_IMPL_OPENGL_LOADER_GLAD)
+target_compile_definitions(ImForge PRIVATE IMGUI_DEFINE_MATH_OPERATORS)
 
-target_include_directories(ImGuiNodeEditor PRIVATE
+target_include_directories(ImForge PRIVATE
     ${CMAKE_SOURCE_DIR}/src
     ${CMAKE_SOURCE_DIR}/src/nodes
     ${CMAKE_SOURCE_DIR}/ext/glad/include
 )
 
-target_sources(ImGuiNodeEditor PRIVATE ${CMAKE_SOURCE_DIR}/ext/glad/src/glad.c)
+target_sources(ImForge PRIVATE ${CMAKE_SOURCE_DIR}/ext/glad/src/glad.c)
 set_source_files_properties(${CMAKE_SOURCE_DIR}/ext/glad/src/glad.c PROPERTIES LANGUAGE CXX)
 
-target_link_libraries(ImGuiNodeEditor PRIVATE imgui glfw)
+target_link_libraries(ImForge PRIVATE imgui glfw)
 
 if(WIN32)
-    target_link_libraries(ImGuiNodeEditor PRIVATE opengl32 comdlg32)
+    target_link_libraries(ImForge PRIVATE opengl32 comdlg32)
     if(MINGW)
-        target_link_options(ImGuiNodeEditor PRIVATE -mwindows)
+        target_link_options(ImForge PRIVATE -mwindows)
     endif()
 endif()

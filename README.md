@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎨 ImGui Node Editor
+# 🔨 ImForge
 
 **A visual node-based editor for building ImGui interfaces. No coding required.**
 
@@ -60,8 +60,8 @@
 ### Build & Run
 
 ```bash
-git clone --recursive https://github.com/YOUR_USER/ImGuiNodeEditor.git
-cd ImGuiNodeEditor
+git clone --recursive https://github.com/Hentaiartz/ImForge.git
+cd ImForge
 cmake -B build
 cmake --build build
 ./build/ImGuiNodeEditor
